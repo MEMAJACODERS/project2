@@ -16,7 +16,7 @@
 	left: 0;
 	width: 250px;
 	height: 100vh;
-	background-color: #1a202c;
+	background-color: #1a202c; /* Dark slate background */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -24,7 +24,7 @@
 }
 
 .sidebar a {
-	color: #ffffff;
+	color: #ffffff; /* White text color for contrast */
 	text-decoration: none;
 	font-weight: 600;
 	margin: 1rem 0;
@@ -32,13 +32,13 @@
 }
 
 .sidebar a:hover {
-	color: #fbb24d;
+	color: #003CFF; /* Blue color on hover */
 }
 
 .main-content {
 	margin-left: 250px;
 	padding: 2rem;
-	background-color: #f5f5f5;
+	background-color: #f5f5f5; /* Light background to match page */
 	min-height: 100vh;
 }
 
