@@ -10,39 +10,65 @@
 </svelte:head>
 
 <style>
-.sidebar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 250px;
-	height: 100vh;
-	background-color: #1a202c; /* Dark slate background */
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-top: 2rem;
-}
-
-.sidebar a {
-	color: #ffffff; /* White text color for contrast */
-	text-decoration: none;
-	font-weight: 600;
-	margin: 1rem 0;
-	transition: color 0.3s ease;
-}
-
-.sidebar a:hover {
-	color: #003CFF; /* Blue color on hover */
-}
-
-.main-content {
-	margin-left: 250px;
-	padding: 2rem;
-	background-color: #f5f5f5; /* Light background to match page */
-	min-height: 100vh;
-}
+	.sidebar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 250px;
+		height: 100vh;
+		background-color: #1a202c;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 2rem;
+		transition: transform 0.3s ease;
+	}
+	
+	.sidebar a {
+		color: #ffffff;
+		text-decoration: none;
+		font-weight: 600;
+		margin: 1rem 0;
+		transition: color 0.3s ease;
+	}
+	
+	.sidebar a:hover {
+		color: #003CFF;
+	}
+	
+	.main-content {
+		margin-left: 250px;
+		padding: 2rem;
+		background-color: #f5f5f5;
+		min-height: 100vh;
+	}
+	
+	@media (max-width: 768px) {
+		.sidebar {
+			width: 100%;
+			height: auto;
+			position: static;
+			flex-direction: row;
+			justify-content: space-around;
+			padding: 1rem 0;
+		}
+		.main-content {
+			margin-left: 0;
+			padding: 1rem;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.sidebar {
+			flex-direction: column;
+		}
+		.main-content {
+			padding: 0.5rem;
+		}
+	}
 
 </style>
+	
 
 <div class="sidebar">
 	<a href="./">Home</a>
